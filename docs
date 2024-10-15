@@ -1,0 +1,20 @@
+Introduction
+Binary Search is an efficient algorithm used for finding an element in a sorted list or array. Unlike linear search, which checks each element one by one, binary search divides the list in half with each step, significantly reducing the number of comparisons needed to find the target value.
+
+Key Characteristics:
+Input Requirement: The array or list must be sorted.
+Search Efficiency: It operates in O(log n) time complexity, making it one of the most efficient search algorithms.
+How Binary Search Works
+Initial Setup:
+Start with the left index (l) at the beginning (0) of the list and the right index (r) at the end of the list (n-1), where n is the number of elements in the list.
+Finding the Middle.
+Compute the middle index (mid) of the list.
+Compare the middle element (arr[mid]) with the target element (x).
+Three Possible Cases:
+Case 1: If arr[mid] == x, then the target element is found, and the index mid is returned.
+Case 2: If arr[mid] > x, the target element must be in the left half, so adjust the right index to mid - 1.
+Case 3: If arr[mid] < x, the target element must be in the right half, so adjust the left index to mid + 1.
+Repeat: Repeat steps 2 and 3, continually halving the search space, until the target element is found or the search space becomes empty (i.e., l > r).
+End Condition:
+If the element is found, return its index.
+If the element is not found, return a message indicating that the element is not in the list.
